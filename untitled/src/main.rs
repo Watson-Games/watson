@@ -1,3 +1,6 @@
+use bevy::prelude::App;
+use untitled::feature::UntitledPlugin;
+
 fn main() {
-    println!("Hello, world!");
+    App::new().add_plugins(UntitledPlugin);
 }
