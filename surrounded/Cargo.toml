@@ -1,5 +1,5 @@
 [package]
-name = "untitled"
+name = "surrounded"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,4 +7,6 @@ edition = "2021"
 bevy.workspace = true
 bevy_editor_pls.workspace = true
 leafwing-input-manager.workspace = true
-thiserror.workspace = true
+
+bevy_pkv = { version = "0.9" }
+bevy_rapier3d = { version = "0.23" }
