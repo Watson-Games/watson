@@ -1,0 +1,12 @@
+use crate::util::PIXELS_PER_METER;
+
+pub const KITTEN_HEIGHT: f32 = 0.5 * PIXELS_PER_METER;
+pub const KITTEN_WIDTH: f32 = 0.5 * PIXELS_PER_METER;
+pub const KITTEN_FOOT_MARGIN: f32 = 0.01;
+pub const KITTEN_FOOT_HEIGHT: f32 = 1.;
+pub const KITTEN_DENSITY: f32 = 20.;
+pub const KITTEN_GRAVITY_SCALE: f32 = 10.;
+pub const KITTEN_FRICTION: f32 = 1.;
+pub const KITTEN_MAX_SPEED: f32 = 5. * PIXELS_PER_METER;
+pub const KITTEN_JUMP_IMPULSE: f32 = 18. * PIXELS_PER_METER;
+pub const KITTEN_MOVE_IMPULSE: f32 = 1. * PIXELS_PER_METER;
