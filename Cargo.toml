@@ -1,5 +1,5 @@
 [workspace]
-members = ["surrounded", "untitled"]
+members = ["surrounded", "tygydyk"]
 resolver = "2"
 
 [profile.dev]
@@ -9,7 +9,7 @@ opt-level = 1
 opt-level = 3
 
 [workspace.dependencies]
-bevy = { version = "0.12" }
-bevy_editor_pls = { version = "0.7" }
-leafwing-input-manager = { version = "0.11" }
+bevy = { version = "0.13" }
+bevy_editor_pls = { version = "0.8" }
+leafwing-input-manager = { version = "0.13" }
 thiserror = { version = "1" }

@@ -1,0 +1,15 @@
+[package]
+name = "tygydyk"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = { workspace = true, features = ["wayland"] }
+bevy_editor_pls.workspace = true
+leafwing-input-manager.workspace = true
+thiserror.workspace = true
+
+bevy_rapier2d = { version = "0.25" }
+bevy_pkv = { version = "0.9" }
+bevy_ecs_ldtk = { version = "0.9" }
+serde = { version = "1.0.195", features = ["derive"] }

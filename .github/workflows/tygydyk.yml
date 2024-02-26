@@ -1,0 +1,19 @@
+on:
+  pull_request:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: system deps
+        run: sudo apt-get install g++ pkg-config libx11-dev libasound2-dev libudev-dev libxkbcommon-x11-0 libwayland-dev libxkbcommon-dev
+      - name: rustfmt
+        run: cargo fmt -p tygydyk --check
+      - name: clippy
+        run: cargo clippy -p tygydyk --no-deps -- -D warnings
+      - name: test
+        run: cargo test -p tygydyk
