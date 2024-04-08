@@ -16,14 +16,16 @@ leafwing-input-manager = { version = "0.13", optional = true }
 serde = { version = "1.0.195", features = ["derive"] }
 
 [features]
-client = ["bevy_editor_pls", "leafwing-input-manager"]
+client = ["bevy_rapier2d", "bevy_editor_pls", "leafwing-input-manager"]
 server = ["bevy_rapier2d"]
+shared = []
+all = ["bevy_rapier2d", "bevy_editor_pls", "leafwing-input-manager"]
 
 [[bin]]
 name = "client"
-required-features = ["client"]
+required-features = ["client", "shared"]
 
 [[bin]]
 name = "server"
-required-features = ["server"]
+required-features = ["server", "shared"]
 

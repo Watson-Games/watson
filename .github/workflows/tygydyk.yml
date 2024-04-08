@@ -14,6 +14,6 @@ jobs:
       - name: rustfmt
         run: cargo fmt -p tygydyk --check
       - name: clippy
-        run: cargo clippy -p tygydyk --no-deps -- -D warnings
+        run: cargo clippy -p tygydyk --features all --no-deps -- -D warnings
       - name: test
-        run: cargo test -p tygydyk
+        run: cargo test -p tygydyk --features all

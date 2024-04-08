@@ -1,5 +1,5 @@
 use bevy::prelude::App;
-use tygydyk::feature::plugin::TygydykServerPlugin;
+use tygydyk::feature::TygydykServerPlugin;
 
 fn main() {
     App::new().add_plugins(TygydykServerPlugin).run();
