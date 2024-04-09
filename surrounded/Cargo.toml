@@ -5,8 +5,8 @@ edition = "2021"
 
 [dependencies]
 bevy.workspace = true
-bevy_editor_pls.workspace = true
-leafwing-input-manager.workspace = true
 
+bevy_editor_pls = { version = "0.8" }
 bevy_pkv = { version = "0.9" }
 bevy_rapier3d = { version = "0.23" }
+leafwing-input-manager = { version = "0.13" }
