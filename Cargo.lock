@@ -809,37 +809,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "bevy_ecs_ldtk"
-version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "834276ae2204268fc26aa43cdc7b53b4432520975fc090dc8b6d711e52da268c"
-dependencies = [
- "bevy 0.12.1",
- "bevy_ecs_ldtk_macros",
- "bevy_ecs_tilemap",
- "derive-getters",
- "derive_more",
- "hex",
- "paste",
- "path-clean",
- "regex",
- "serde",
- "serde_json",
- "thiserror",
-]
-
-[[package]]
-name = "bevy_ecs_ldtk_macros"
-version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "64a5e99aa79110c76277025c0b077822871303fa51712332e818bb004ce3b873"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 1.0.109",
-]
-
-[[package]]
 name = "bevy_ecs_macros"
 version = "0.12.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -861,17 +830,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.48",
-]
-
-[[package]]
-name = "bevy_ecs_tilemap"
-version = "0.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "767e622c07330b7581b109f232690ae5ccf18a91aa6b01d19beaeb20ddf797bc"
-dependencies = [
- "bevy 0.12.1",
- "log",
- "regex",
 ]
 
 [[package]]
@@ -980,7 +938,6 @@ dependencies = [
  "bevy_pbr 0.12.1",
  "bevy_reflect 0.12.1",
  "bevy_render 0.12.1",
- "bevy_sprite 0.12.1",
  "bevy_transform 0.12.1",
  "bevy_utils 0.12.1",
 ]
@@ -1002,7 +959,7 @@ dependencies = [
  "bevy_pbr 0.13.0",
  "bevy_reflect 0.13.0",
  "bevy_render 0.13.0",
- "bevy_sprite 0.13.0",
+ "bevy_sprite",
  "bevy_transform 0.13.0",
  "bevy_utils 0.13.0",
 ]
@@ -1132,7 +1089,6 @@ dependencies = [
  "bevy_reflect 0.12.1",
  "bevy_render 0.12.1",
  "bevy_scene 0.12.1",
- "bevy_sprite 0.12.1",
  "bevy_tasks 0.12.1",
  "bevy_time 0.12.1",
  "bevy_transform 0.12.1",
@@ -1168,7 +1124,7 @@ dependencies = [
  "bevy_reflect 0.13.0",
  "bevy_render 0.13.0",
  "bevy_scene 0.13.0",
- "bevy_sprite 0.13.0",
+ "bevy_sprite",
  "bevy_tasks 0.13.0",
  "bevy_text",
  "bevy_time 0.13.0",
@@ -1414,19 +1370,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "bevy_rapier2d"
-version = "0.25.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dc1f2ef2ae7fcf68ccb33f95c1dfc7c679bbc0e33b7f2e461353073065ff6e1e"
-dependencies = [
- "bevy 0.13.0",
- "bitflags 2.4.2",
- "log",
- "nalgebra",
- "rapier2d",
-]
-
-[[package]]
 name = "bevy_rapier3d"
 version = "0.23.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1436,7 +1379,20 @@ dependencies = [
  "bitflags 2.4.2",
  "log",
  "nalgebra",
- "rapier3d",
+ "rapier3d 0.17.2",
+]
+
+[[package]]
+name = "bevy_rapier3d"
+version = "0.25.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3ac2b344d110e8aff2dab7ca6ed428dfcbbfeeb8f20827825996538f24e7fcdf"
+dependencies = [
+ "bevy 0.13.0",
+ "bitflags 2.4.2",
+ "log",
+ "nalgebra",
+ "rapier3d 0.18.0",
 ]
 
 [[package]]
@@ -1658,32 +1614,6 @@ dependencies = [
 
 [[package]]
 name = "bevy_sprite"
-version = "0.12.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c7cc0c9d946e17e3e0aaa202f182837bc796c4f862b2e5a805134f873f21cf7f"
-dependencies = [
- "bevy_app 0.12.1",
- "bevy_asset 0.12.1",
- "bevy_core_pipeline 0.12.1",
- "bevy_derive 0.12.1",
- "bevy_ecs 0.12.1",
- "bevy_log 0.12.1",
- "bevy_math 0.12.1",
- "bevy_reflect 0.12.1",
- "bevy_render 0.12.1",
- "bevy_transform 0.12.1",
- "bevy_utils 0.12.1",
- "bitflags 2.4.2",
- "bytemuck",
- "fixedbitset",
- "guillotiere",
- "radsort",
- "rectangle-pack",
- "thiserror",
-]
-
-[[package]]
-name = "bevy_sprite"
 version = "0.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5ea977d7d7c48fc4ba283d449f09528c4e70db17c9048e32e99ecd9890d72223"
@@ -1749,7 +1679,7 @@ dependencies = [
  "bevy_math 0.13.0",
  "bevy_reflect 0.13.0",
  "bevy_render 0.13.0",
- "bevy_sprite 0.13.0",
+ "bevy_sprite",
  "bevy_transform 0.13.0",
  "bevy_utils 0.13.0",
  "bevy_window 0.13.0",
@@ -1834,7 +1764,7 @@ dependencies = [
  "bevy_math 0.13.0",
  "bevy_reflect 0.13.0",
  "bevy_render 0.13.0",
- "bevy_sprite 0.13.0",
+ "bevy_sprite",
  "bevy_text",
  "bevy_transform 0.13.0",
  "bevy_utils 0.13.0",
@@ -2370,12 +2300,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "convert_case"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6245d59a3e82a7fc217c5828a6692dbc6dfb63a0c8c90495621f7b9d79704a0e"
-
-[[package]]
 name = "core-foundation"
 version = "0.9.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2588,26 +2512,13 @@ dependencies = [
 ]
 
 [[package]]
-name = "derive-getters"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7a2c35ab6e03642397cdda1dd58abbc05d418aef8e36297f336d5aba060fe8df"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 1.0.109",
-]
-
-[[package]]
 name = "derive_more"
 version = "0.99.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4fb810d30a7c1953f91334de7244731fc3f3c10d7fe163338a35b9f640960321"
 dependencies = [
- "convert_case",
  "proc-macro2",
  "quote",
- "rustc_version",
  "syn 1.0.109",
 ]
 
@@ -3423,12 +3334,6 @@ name = "hermit-abi"
 version = "0.3.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d231dfb89cfffdbc30e7fc41579ed6066ad03abda9e567ccafae602b97ec5024"
-
-[[package]]
-name = "hex"
-version = "0.4.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
 
 [[package]]
 name = "hexasphere"
@@ -4552,27 +4457,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "parry2d"
-version = "0.13.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "104ae65232e20477a98f9f1e75ca9850eae24a2ea846a2b1a0af03ad752136ce"
-dependencies = [
- "approx",
- "arrayvec",
- "bitflags 1.3.2",
- "downcast-rs",
- "either",
- "nalgebra",
- "num-derive 0.3.3",
- "num-traits",
- "rustc-hash",
- "simba",
- "slab",
- "smallvec",
- "spade",
-]
-
-[[package]]
 name = "parry3d"
 version = "0.13.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4598,12 +4482,6 @@ name = "paste"
 version = "1.0.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "de3145af08024dea9fa9914f381a17b8fc6034dfb00f3a84013f7ff43f29ed4c"
-
-[[package]]
-name = "path-clean"
-version = "1.0.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "17359afc20d7ab31fdb42bb844c8b3bb1dabd7dcf7e68428492da7f16966fcef"
 
 [[package]]
 name = "peeking_take_while"
@@ -4893,26 +4771,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9c8a99fddc9f0ba0a85884b8d14e3592853e787d581ca1816c91349b10e4eeab"
 
 [[package]]
-name = "rapier2d"
-version = "0.18.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "48a3ec4ae89e0837c0ff6f29af32a8e5d78dfabe2273dcd945cfaf3f5d2b1501"
-dependencies = [
- "approx",
- "arrayvec",
- "bit-vec",
- "bitflags 1.3.2",
- "crossbeam",
- "downcast-rs",
- "nalgebra",
- "num-derive 0.4.1",
- "num-traits",
- "parry2d",
- "rustc-hash",
- "simba",
-]
-
-[[package]]
 name = "rapier3d"
 version = "0.17.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4926,6 +4784,26 @@ dependencies = [
  "downcast-rs",
  "nalgebra",
  "num-derive 0.3.3",
+ "num-traits",
+ "parry3d",
+ "rustc-hash",
+ "simba",
+]
+
+[[package]]
+name = "rapier3d"
+version = "0.18.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "92d07a833e0aa3bc57010caaa50bf75fa78afc03a74207607db740da4e4579a1"
+dependencies = [
+ "approx",
+ "arrayvec",
+ "bit-vec",
+ "bitflags 1.3.2",
+ "crossbeam",
+ "downcast-rs",
+ "nalgebra",
+ "num-derive 0.4.1",
  "num-traits",
  "parry3d",
  "rustc-hash",
@@ -5155,15 +5033,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "08d43f7aa6b08d49f382cde6a7982047c3426db949b1424bc4b7ec9ae12c6ce2"
 
 [[package]]
-name = "rustc_version"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bfa0f585226d2e68097d4f95d113b15b83a82e819ab25717ec0590d9584ef366"
-dependencies = [
- "semver",
-]
-
-[[package]]
 name = "rustix"
 version = "0.38.31"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5319,12 +5188,6 @@ dependencies = [
  "core-foundation-sys",
  "libc",
 ]
-
-[[package]]
-name = "semver"
-version = "1.0.21"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b97ed7a9823b74f99c7742f5336af7be5ecd3eeafcb1507d1fa93347b1d589b0"
 
 [[package]]
 name = "serde"
@@ -5530,7 +5393,7 @@ dependencies = [
  "bevy 0.13.0",
  "bevy_editor_pls",
  "bevy_pkv 0.9.1",
- "bevy_rapier3d",
+ "bevy_rapier3d 0.23.0",
  "leafwing-input-manager",
 ]
 
@@ -5896,11 +5759,10 @@ name = "tygydyk"
 version = "0.1.0"
 dependencies = [
  "bevy 0.13.0",
- "bevy_ecs_ldtk",
  "bevy_editor_pls",
  "bevy_pkv 0.10.0",
  "bevy_quinnet",
- "bevy_rapier2d",
+ "bevy_rapier3d 0.25.0",
  "leafwing-input-manager",
  "serde",
  "thiserror",

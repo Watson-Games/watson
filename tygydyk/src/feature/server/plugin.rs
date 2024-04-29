@@ -3,7 +3,7 @@ use bevy::diagnostic::FrameTimeDiagnosticsPlugin;
 use bevy::prelude::{App, Plugin};
 use bevy::MinimalPlugins;
 use bevy_pkv::PkvStore;
-use bevy_rapier2d::prelude::RapierDebugRenderPlugin;
+use bevy_rapier3d::prelude::RapierDebugRenderPlugin;
 
 pub struct TygydykServerPlugin;
 

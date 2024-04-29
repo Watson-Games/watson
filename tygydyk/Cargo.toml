@@ -7,19 +7,18 @@ edition = "2021"
 bevy = { workspace = true, features = ["wayland"] }
 thiserror.workspace = true
 
-bevy_rapier2d = { version = "0.25", optional = true }
+bevy_rapier3d = { version = "0.25", optional = true }
 bevy_editor_pls = { version = "0.8", optional = true }
-bevy_ecs_ldtk = { version = "0.9" }
 bevy_pkv = { version = "0.10.0" }
 bevy_quinnet = { version = "0.7" }
 leafwing-input-manager = { version = "0.13", optional = true }
 serde = { version = "1.0.195", features = ["derive"] }
 
 [features]
-client = ["bevy_rapier2d", "bevy_editor_pls", "leafwing-input-manager"]
-server = ["bevy_rapier2d"]
-shared = []
-all = ["bevy_rapier2d", "bevy_editor_pls", "leafwing-input-manager"]
+client = ["bevy_editor_pls", "leafwing-input-manager"]
+server = []
+shared = ["bevy_rapier3d"]
+all = ["bevy_rapier3d", "bevy_editor_pls", "leafwing-input-manager"]
 
 [[bin]]
 name = "client"
